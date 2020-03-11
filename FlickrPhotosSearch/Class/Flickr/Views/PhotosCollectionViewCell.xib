@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotosCollectionViewCell" id="gTV-IL-0wX" customClass="PhotosCollectionViewCell" customModule="FlickrPhotosSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="143" height="174"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="143" height="174"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lee-2R-WKP" userLabel="ContentView">
+                        <rect key="frame" x="0.0" y="0.0" width="143" height="174"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Zmz-Na-3R6">
+                                <rect key="frame" x="8" y="10" width="127" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zmz-Na-3R6" secondAttribute="height" multiplier="1:1" id="Qb3-se-p9t"/>
+                                    <constraint firstAttribute="width" constant="127" id="bRW-uI-mM7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gj0-9i-bTO">
+                                <rect key="frame" x="48" y="153" width="87" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcv-kW-HDY">
+                                <rect key="frame" x="8" y="137" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kcv-kW-HDY" secondAttribute="height" multiplier="1:1" id="F6h-q2-SfE"/>
+                                    <constraint firstAttribute="width" constant="32" id="dHq-Xi-NBJ"/>
+                                </constraints>
+                                <state key="normal" image="favorit.add"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kcv-kW-HDY" firstAttribute="leading" secondItem="Zmz-Na-3R6" secondAttribute="leading" id="7cr-KH-8DM"/>
+                            <constraint firstItem="gj0-9i-bTO" firstAttribute="trailing" secondItem="Zmz-Na-3R6" secondAttribute="trailing" id="AeG-ta-U5g"/>
+                            <constraint firstItem="Zmz-Na-3R6" firstAttribute="centerX" secondItem="lee-2R-WKP" secondAttribute="centerX" id="Be1-0z-F2i"/>
+                            <constraint firstItem="gj0-9i-bTO" firstAttribute="centerY" secondItem="kcv-kW-HDY" secondAttribute="centerY" id="KQ2-bR-qRW"/>
+                            <constraint firstItem="Zmz-Na-3R6" firstAttribute="top" secondItem="lee-2R-WKP" secondAttribute="top" constant="10" id="pag-DK-YYO"/>
+                            <constraint firstItem="gj0-9i-bTO" firstAttribute="leading" secondItem="kcv-kW-HDY" secondAttribute="trailing" constant="8" symbolic="YES" id="xCf-ef-MN1"/>
+                            <constraint firstItem="kcv-kW-HDY" firstAttribute="top" secondItem="Zmz-Na-3R6" secondAttribute="bottom" id="y01-x4-oi6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lee-2R-WKP" secondAttribute="trailing" id="Hw0-9y-BJe"/>
+                <constraint firstItem="lee-2R-WKP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IPh-Ny-Ds5"/>
+                <constraint firstAttribute="bottom" secondItem="lee-2R-WKP" secondAttribute="bottom" id="t7h-P6-jxA"/>
+                <constraint firstItem="lee-2R-WKP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tF2-ds-i47"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="105" height="108"/>
+            <connections>
+                <outlet property="favoriteButton" destination="kcv-kW-HDY" id="iLh-Fy-kwK"/>
+                <outlet property="imageLabel" destination="gj0-9i-bTO" id="tIu-ut-4I0"/>
+                <outlet property="imageView" destination="Zmz-Na-3R6" id="kZB-Ux-aMr"/>
+                <outlet property="imageWidthConstraint" destination="bRW-uI-mM7" id="SJ4-Bj-Zsx"/>
+            </connections>
+            <point key="canvasLocation" x="103.62318840579711" y="-40.178571428571423"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="favorit.add" width="28" height="28"/>
+        <image name="image" width="176" height="176"/>
+    </resources>
+</document>
